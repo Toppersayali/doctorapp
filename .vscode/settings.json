@@ -1,0 +1,7 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "emulator.androidColdBoot": true,
+    "emulator.androidExtraBootArgs": "C:\\Users\\Sayali Khandare\\AppData\\Local\\Android\\Sdk\\emulator\\package.xml",
+    "emulator.emulatorPathWindows": "\"C:\\Users\\Sayali Khandare\\Downloads\\android-studio-2022.3.1.20-windows.exe\"",
+    "cmake.sourceDirectory": "C:/Users/Sayali Khandare/Desktop/flutter_application_1/linux"
+}
