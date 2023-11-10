@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/home_page.dart';
-import 'package:flutter_application_1/login_page.dart';
-import 'package:flutter_application_1/utilites/routes.dart';
+import 'utilites/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,8 +23,11 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: <String, WidgetBuilder>{
         MyRoutes.homeRoute: (context) => const HomePage(),
-        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.loginRoute: (context) => _LoginPageState(),
       },
     );
   }
+
+  // ignore: non_constant_identifier_names
+  _LoginPageState() {}
 }

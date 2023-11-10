@@ -1,11 +1,15 @@
-// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: use_build_context_synchronously, prefer_const_constructors, unused_element, unnecessary_import, unused_import, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/utilites/routes.dart';
 
-// ignore: use_key_in_widget_constructors
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
+  //const LoginPage({super,key}):
   @override
+  // ignore: library_private_types_in_public_api
   _LoginPageState createState() => _LoginPageState();
 }
 
@@ -13,16 +17,17 @@ class _LoginPageState extends State<LoginPage> {
   String name = "";
   bool changeButton = false;
 
-  final _formKey = GlobalKey<FormState>();
+  final formKey = GlobalKey<FormState>();
+
+  // Define a separate GlobalKey for other purposes if needed.
 
   moveToHome(BuildContext context) async {
-    if (_formKey.currentState!.validate()) {
+    if (formKey.currentState!.validate()) {
       setState(() {
         changeButton = true;
       });
-      await Future.delayed(const Duration(seconds: 1));
-      // ignore: use_build_context_synchronously
-      await Navigator.pushNamed(context, MyRoutes.homeRoute);
+      await Future.delayed(Duration(seconds: 1));
+      // await Navigator.pushNamed(context, MyRoutes.homeRoute);
       setState(() {
         changeButton = false;
       });
@@ -32,10 +37,11 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
+        // Your existing widget tree
         color: Colors.white,
         child: SingleChildScrollView(
           child: Form(
-            key: _formKey,
+            key: formKey,
             child: Column(
               children: [
                 Image.asset(
